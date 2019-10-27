@@ -78,8 +78,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #Default settings when the polling app was created
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': 'sreproject',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'USER': 'sreprojectuser',
+        'PASSWORD': '<password-goes-here>', #Yes, that is actually the password. lol
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
