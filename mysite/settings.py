@@ -76,36 +76,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 #Default settings when the polling app was created
+#These may not work when running the app locally
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': 'sreproject',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'sreprojectuser',
-        'PASSWORD': '<password-goes-here>', #Yes, that is actually the password. lol
+        'USER': 'sweet',
+        'PASSWORD': 'MegaPassword',
         'HOST': 'localhost',
         'PORT': '',
     }
 }
-
-
-'''
-#Settings provided by Bruce:
-#Which, I think needs to be different than when ran locally...
-DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sreproject',
-        'USER': 'sreprojectuser',
-        'PASSWORD': '<password-goes-here>', #Yes, that is actually the password. lol
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-'''
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
