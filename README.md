@@ -18,9 +18,12 @@ Activate virtual environment: `virtual` <br>
 Migrate database & collect static content: `migrate` <br>
 Start the server locally: `runserver` <br>
 Start gunicorn: `rungunicorn` <br>
+Start gunicorn in background (you can close your terminal): `rungunicornbg` <br>
 Restart NGINX: `restartnginx` <br>
 Edit Database settings (with emacs of course): `editsettings` <br>
 Edit the NGINX confic file: `editnginx` <br>
+List processes using port 8000: `8000` <br>
+Kill processes using port 8000: `kill8000` <br>
 
 ### Creating a polling question example
 This can also be achieved via the `/admin` endpoint. <br>
