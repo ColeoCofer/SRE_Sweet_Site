@@ -20,8 +20,10 @@ Start the server locally: `runserver` <br>
 Start gunicorn: `rungunicorn` <br>
 Start gunicorn in background (you can close your terminal): `rungunicornbg` <br>
 Restart NGINX: `restartnginx` <br>
-Edit Database settings (with emacs of course): `editsettings` <br>
-Edit the NGINX confic file: `editnginx` <br>
+Edit Database settings (emacs): `editsettings` <br>
+Edit Database settings (vim): `veditsettings` <br>
+Edit the NGINX config file (emacs): `editnginx` <br>
+Edit the NGINX config file (vim): `veditnginx` <br>
 List processes using port 8000: `8000` <br>
 Kill processes using port 8000: `kill8000` <br>
 
