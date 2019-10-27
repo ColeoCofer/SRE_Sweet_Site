@@ -2,8 +2,9 @@
 Vote: http://34.66.4.34/polls/ <br>
 Admin: http://34.66.4.34/admin/ <br>
 
-### How to migrate data
+### How to migrate database & collect static content
 I created an alias to do this, you can just type `migrate` instead of the following: <br>
+This will collect static content into the directory specified in `mysite/settings.py` <br>
 ```
 ./manage.py makemigrations
 ./manage.py migrate
@@ -12,7 +13,7 @@ I created an alias to do this, you can just type `migrate` instead of the follow
 
 ### Useful alias's
 Activate virtual environment: `virtual` <br>
-Migrate data & collect static files: `migrate` <br>
+Migrate database & collect static content: `migrate` <br>
 Start the server locally: `runserver` <br>
 Start gunicorn: `rungunicorn` <br>
 Restart NGINX: `restartnginx` <br>
@@ -25,10 +26,10 @@ This can also be achieved via the `/admin` endpoint. <br>
 ./manage shell
 from polls.models import Choice, Question
 from django.utils import timezone
- q = Question(question_text="Cats or Dogs?", pub_date=timezone.now())
- q.save()
- q.choice_set.create(choice_text='Cats!', votes=0)
- q.choice_set.create(choice_text='Dogs!', votes=0)
+q = Question(question_text="Cats or Dogs?", pub_date=timezone.now())
+q.save()
+q.choice_set.create(choice_text='Cats!', votes=0)
+q.choice_set.create(choice_text='Dogs!', votes=0)
 exit()
 ```
 
