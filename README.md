@@ -1,8 +1,8 @@
 # Team Sweet Team Name - SRE Project
 
 ### Site Endpoints
-Vote: http://34.66.4.34/polls/ <br>
-Admin: http://34.66.4.34/admin/ <br>
+Vote: http://35.225.249.122/polls/ <br>
+Admin: http://35.225.249.122/admin/ <br>
 
 ### How to migrate database & collect static content
 I created an alias to do this, you can just type `migrate` instead of the following: <br>
