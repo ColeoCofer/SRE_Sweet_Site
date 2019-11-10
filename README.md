@@ -3,6 +3,7 @@
 ### Site Endpoints
 Vote: http://35.225.249.122/polls/ <br>
 Admin: http://35.225.249.122/admin/ <br>
+Monitoring Dashboard: https://app.google.stackdriver.com/?project=sreproject
 
 ### How to migrate database & collect static content
 I created an alias to do this, you can just type `migrate` instead of the following: <br>
