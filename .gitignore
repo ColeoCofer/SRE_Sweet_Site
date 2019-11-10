@@ -1,6 +1,8 @@
 ### Django ###
-**db.cluster
+/root/mysite/db.cluster/db.sqlite3
+**/db.cluster/db.sqlite3
 *.log
+/root/mysite/logfile
 *.pot
 *.pyc
 *.~
