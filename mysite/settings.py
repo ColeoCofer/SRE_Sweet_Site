@@ -25,7 +25,7 @@ SECRET_KEY = '7*=00t2j-juo$r4cfqkv2@b)*_uyyc@0d_ez3y1vh=lbam(im4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '34.66.4.34']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '34.66.4.34', '35.239.140.212', '34.67.36.219', '*']
 
 
 # Application definition
@@ -80,7 +80,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': '/root/mysite/db.cluster/db.sqlite3',
         'USER': 'sweet',
         'PASSWORD': 'MegaPassword',
         'HOST': 'localhost',
@@ -126,3 +127,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+#STATIC_ROOT = '/static/'
+
