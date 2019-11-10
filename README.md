@@ -36,6 +36,21 @@ TODO: Use the supervisor package to automatically start gunicorn on startup <br>
 6. `8000` to verifiy that gunicorn is listening to port 8000
 7. You should now be good to close your terminal and still hit the site
 
+### Create duplicate / Snapshot of instance
+1. Create snapshot using the `sweet-project-instance` selected as the `Source Disk` option: https://console.cloud.google.com/compute/snapshots?showFTMessage=false&project=sreproject&tab=snapshots&snapshotssize=50
+2. Create a new instance and select the snapshot you just created as the `boot disk` option.
+3. Ssh into the instance, login as root, and edit the mysite/mysite/settings.py file and add the instance's IP address into the `ALLOWED_HOSTS` array.
+4. Run the commands `virtual` and `migrate`
+5. Run gunicornm (you may need to run it on a different port like `8001`
+6. You should now be able to hit the site via `http://<ip-address>:8001/polls`
+
+## Stop Postgres
+1. `sudo su - postgres`
+2. `/usr/lib/postgresql/9.6/bin/pg_ctl -D /usr/lib/postgresql/ -l /root/mysite/logfile.txt stop`
+
+### Start Postgres
+1. Login as your normal user (not root or postgres)
+2. `/usr/lib/postgresql/9.6/bin/pg_ctl -D /root/mysite/db.cluster/ -l /root/mysite/logfile.txt start`
 
 #### Site not working?
 Things to check: <br>
